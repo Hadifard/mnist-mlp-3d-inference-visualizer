@@ -1,9 +1,0 @@
-# نادیده گرفتن کدهای جاوااسکریپت، HTML و CSS در محاسبه زبان اصلی پروژه
-*.js linguist-detectable=false
-*.html linguist-detectable=false
-*.css linguist-detectable=false
-
-# اگر از کدهای چارت یا ویژوالایزر در پوشه خاصی استفاده می‌کنید (مانند static یا web)
-# می‌توانید کل پوشه را به عنوان فایل‌های جانبی علامت‌گذاری کنید:
-# static/* linguist-vendored=true
-# docs/* linguist-documentation=true
