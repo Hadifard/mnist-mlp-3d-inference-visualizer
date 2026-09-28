@@ -1,0 +1,63 @@
+/*
+  Excerpt from the application source (Main.css).
+  Author: Hadi Sarhangi Fard
+
+  Shown here: the colour tokens and the "glass" info box at the top of the scene.
+*/
+
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --sidebar-width: 288px;
+  --bg-glass: rgba(10, 16, 30, 0.85);
+  --border-glass: rgba(91, 160, 255, 0.25);
+  --accent-color: #3b82f6;
+  --text-primary: #f5f7ff;
+  --text-secondary: rgba(173, 205, 255, 0.75);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(farthest-corner at 54px 36px, #152646 40%, #051124df 60%);
+  color: #f5f7ff;
+  overflow: hidden;
+  transition: background 1s ease;
+}
+
+/* The Three.js canvas fills the whole window behind the panels */
+body > canvas {
+  position: fixed !important;
+  inset: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 1 !important;
+}
+
+/* Info box at the top centre */
+.top-info-box {
+  position: absolute;
+  top: 21.6px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none; /* clicks pass through to the 3D scene */
+
+  background: rgba(8, 14, 28, 0.6);
+  backdrop-filter: blur(10.8px);
+  padding: 14.4px 28.8px;
+  border-radius: 7.2px;
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 7.2px 28.8px rgba(0, 0, 0, 0.3);
+  max-width: 90vw;
+}
+
+.header-title {
+  margin: 0 0 7.2px 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 1.8px 9px rgba(0, 0, 0, 0.5);
+}
